@@ -53,7 +53,7 @@ function App() {
               {/* Protected Routes with Layout */}
               <Route element={<Layout />}>
                 <Route
-                  path="/homepage"
+                  path="/"
                   element={
                     <PrivateRoute>
                       <Dashboard />
