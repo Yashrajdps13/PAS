@@ -43,94 +43,94 @@ function App() {
     <LocalizationProvider dateAdapter={AdapterDayjs}>
       {/* <ThemeProvider theme={theme}> */}
       <div style={appStyles}>
-      <LocalizationProvider dateAdapter={AdapterDayjs}>
-        {/* <ThemeProvider theme={theme}> */}
-      <Router>
-        <Routes>
-          {/* Public Route for Login */}
-          
+        <LocalizationProvider dateAdapter={AdapterDayjs}>
+          {/* <ThemeProvider theme={theme}> */}
+          <Router>
+            <Routes>
+              {/* Public Route for Login */}
 
-          {/* Protected Routes with Layout */}
-          <Route element={<Layout />}>
-            <Route 
-              path="/" 
-              element={
-                <PrivateRoute>
-                  <Dashboard />
-                </PrivateRoute>
-              } 
-            />
-             <Route path="/signup" element={
-              <PrivateRoute>
-              <Signup />
-            </PrivateRoute>
 
-             } />
-            <Route 
-              path="/applications" 
-              element={
-                <PrivateRoute>
-                  <ApplicationReview />
-                </PrivateRoute>
-              } 
-            />
-            <Route 
-              path="/track" 
-              element={
-                <PrivateRoute>
-                  <TrackApplication />
-                </PrivateRoute>
-              } 
-            />
-            <Route 
-              path="/verification" 
-              element={
-                <PrivateRoute>
-                  <DocumentVerification />
-                </PrivateRoute>
-              } 
-            />
-            <Route 
-              path="/issuance" 
-              element={
-                <PrivateRoute>
-                  <PassportIssuance />
-                </PrivateRoute>
-              } 
-            />
+              {/* Protected Routes with Layout */}
+              <Route element={<Layout />}>
+                <Route
+                  path="/homepage"
+                  element={
+                    <PrivateRoute>
+                      <Dashboard />
+                    </PrivateRoute>
+                  }
+                />
+                <Route path="/signup" element={
+                  <PrivateRoute>
+                    <Signup />
+                  </PrivateRoute>
 
-<Route 
-              path="/recent" 
-              element={
-                <PrivateRoute>
-                  <RecentApplications/>
-                </PrivateRoute>
-              } 
-            />
-            <Route 
-              path="/reports" 
-              element={
-                <PrivateRoute>
-                  <Reports />
-                </PrivateRoute>
-              } 
-            />
-            <Route 
-              path="/apply" 
-              element={
-                <PrivateRoute>
-                  <ApplicationForm />
-                </PrivateRoute>
-              } 
-            />
-          </Route>
-        </Routes>
-      </Router>
-      </LocalizationProvider>
+                } />
+                <Route
+                  path="/applications"
+                  element={
+                    <PrivateRoute>
+                      <ApplicationReview />
+                    </PrivateRoute>
+                  }
+                />
+                <Route
+                  path="/track"
+                  element={
+                    <PrivateRoute>
+                      <TrackApplication />
+                    </PrivateRoute>
+                  }
+                />
+                <Route
+                  path="/verification"
+                  element={
+                    <PrivateRoute>
+                      <DocumentVerification />
+                    </PrivateRoute>
+                  }
+                />
+                <Route
+                  path="/issuance"
+                  element={
+                    <PrivateRoute>
+                      <PassportIssuance />
+                    </PrivateRoute>
+                  }
+                />
 
-</div>   
-   {/* </ThemeProvider> */}
-      </LocalizationProvider>
+                <Route
+                  path="/recent"
+                  element={
+                    <PrivateRoute>
+                      <RecentApplications />
+                    </PrivateRoute>
+                  }
+                />
+                <Route
+                  path="/reports"
+                  element={
+                    <PrivateRoute>
+                      <Reports />
+                    </PrivateRoute>
+                  }
+                />
+                <Route
+                  path="/apply"
+                  element={
+                    <PrivateRoute>
+                      <ApplicationForm />
+                    </PrivateRoute>
+                  }
+                />
+              </Route>
+            </Routes>
+          </Router>
+        </LocalizationProvider>
+
+      </div>
+      {/* </ThemeProvider> */}
+    </LocalizationProvider>
   );
 }
 
